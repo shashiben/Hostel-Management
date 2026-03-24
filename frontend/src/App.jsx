@@ -1,5 +1,5 @@
 import React from "react";
-import HomeView from "../src/screens/homeView";
+import HomeView from "./screens/homeView";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Header from "./components/header";

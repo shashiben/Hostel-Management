@@ -1,15 +1,13 @@
 import dotenv from "dotenv";
-import students from "./data/students.js";
 import Student from "./models/student.js";
 
-import connectDB from "./config/db.js";
+import connectDB from "./config/mongoDBConfig.js";
 
 dotenv.config();
 
-connectDB();
-
 const importData = async () => {
   try {
+    await connectDB();
     await Student.deleteMany();
     console.log("Data Imported!");
     process.exit();
@@ -21,6 +19,7 @@ const importData = async () => {
 
 const destroyData = async () => {
   try {
+    await connectDB();
     await Student.deleteMany();
     console.log("Data Destroyed!");
     process.exit();

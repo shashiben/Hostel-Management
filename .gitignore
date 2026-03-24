@@ -12,6 +12,7 @@ node_modules/
 
 # production
 /frontend/build
+/frontend/dist
 /frontend/node_modules
 
 # misc
